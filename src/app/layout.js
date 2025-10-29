@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,12 +19,25 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  let date =new  Date().getFullYear()
+  // 
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-zinc-900 dark:text-white `}
       >
+        <Navbar />
+        <Toaster/>
         {children}
+
+        <footer className=" container mx-auto  border-t-2 mt-20 md:flex md:flex-row md:justify-between border-zinc-500 dark:border-zinc-700 px-1 py-4 ">
+          <p className="lead text-[#888E99] dark:text-zinc-400 text-center">
+            &copy; {date} <b> Nathanael Alimsiwen Akowan </b> . All rights reserved
+          </p>
+          <div className="p-2 flex justify-center gap-4 ">
+            <span> Terms of Service</span><span> Privacy Policy</span><span> contact me</span>
+          </div>
+        </footer>
       </body>
     </html>
   );
