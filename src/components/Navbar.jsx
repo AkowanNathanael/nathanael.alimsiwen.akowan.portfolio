@@ -38,8 +38,8 @@ function Navbar() {
     }
     const pathname = usePathname();
     const params = useParams()
-    const serachparams = useSearchParams()
-    console.log(params, serachparams)
+    // const serachparams = useSearchParams()
+    // console.log(params, serachparams)
 
     // const par = useParams();
     // console.log(par)
