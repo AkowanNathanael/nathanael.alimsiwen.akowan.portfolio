@@ -1,10 +1,13 @@
-
+import { Suspense } from 'react';
 export default function ABout() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div>
         <form action="" method="post">
-              
-       </form>
-    </div>
+
+        </form>
+      </div>
+    </Suspense>
+
   )
 }
