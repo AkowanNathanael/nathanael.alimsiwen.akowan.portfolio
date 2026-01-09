@@ -5,8 +5,8 @@ function Card({ title, description, icon }) {
       <p className="icon text-blue-600 mb-4">{icon}</p>
       <h2 className="text-3xl text-white p-2 text-center"> {title}</h2>
       <p className=" text-center  text-[#888E99] ">
-        {description}
-      </p>
+        {description} &nbsp
+      </p> 
     </div>
   )
 }
